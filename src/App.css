@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+/* slider */
+.carousel-item img{
+  width: 100vw;
+  height: 100vh;
+}
+.carousel-caption h3{
+  font-family: __Satisfy_51677f, __Satisfy_Fallback_51677f;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -17em;
+}
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c3488;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.carousel-caption , .carousel-control-next , .carousel-control-prev{
+  z-index: 99;
+}
+
+/* Enquiries form css */
+.search-form {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.search-form .form-select {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.btn-pink {
+  background-color: #ff007f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #e60072;
+}
+.headerform{
+  top: -12em;
+    z-index: 999;
+    position: absolute;
+}
+@media screen and (max-width: 1200px) {
+  .headerform {
+    top: -19em;
+  }
+}
