@@ -42,7 +42,7 @@ const Enquiries = ({ style, className }) => {
         setMaxAgeDropdownOpen(false);
     };
 
-    const ageOptions = Array.from({ length: 80 }, (_, i) => i + 18); // Array of ages from 18 to 97
+    const ageOptions = Array.from({ length: 80 }, (_, i) => i + 18); 
 
     const handleGenderSelect = (selectedGender) => {
         setGender(selectedGender);
@@ -52,9 +52,9 @@ const Enquiries = ({ style, className }) => {
     return (
         <div className={`search-form p-3 d-flex justify-content-center align-items-center ${className}`} style={style}>
             <form className="row g-2 w-100 justify-content-around">
-
+            <h1 className="text-sm sm:text-base text-start  text-white font-normal">I'm looking </h1>
                 {/* Gender Selector */}
-                <div className="col-md-1 col-auto">
+                <div className="col-md-1 col-6">
                     <div style={{ position: "relative" }}>
                         <div className="stdropdown-container">
                             <div
@@ -74,6 +74,7 @@ const Enquiries = ({ style, className }) => {
                                     </div>
                                 </div>
                             </div>
+                            
                             {isGenderDropdownOpen && (
                                 <div className="stdropdown-menu">
                                     <div
@@ -101,7 +102,7 @@ const Enquiries = ({ style, className }) => {
                 </div>
 
                 {/* Age Selector */}
-                <div className="col-md-3 col-auto">
+                <div className="col-md-3 col-6">
                     <div className="d-flex align-items-center">
                         {/* Minimum Age Selector */}
                         <div style={{ position: "relative" }}>
@@ -139,7 +140,7 @@ const Enquiries = ({ style, className }) => {
                             </div>
                         </div>
 
-                        <span className="mx-2">to</span>
+                        <span className="mx-2 text-white">To</span>
 
                         {/* Maximum Age Selector */}
                         <div style={{ position: "relative" }}>
@@ -180,7 +181,7 @@ const Enquiries = ({ style, className }) => {
                 </div>
 
                 {/* Religion Selector */}
-                <div className="col-md-2 col-auto">
+                <div className="col-md-2 col-6">
                     <div style={{ position: "relative" }}>
                         <div className="stdropdown-container">
                             <div
@@ -218,7 +219,7 @@ const Enquiries = ({ style, className }) => {
                 </div>
 
                 {/* City, State, Country Selectors */}
-                <div className="col-md-2 col-auto">
+                <div className="col-md-2 col-6">
                     <CountrySelect
                         onChange={(e) => {
                             setCountryid(e.id);
@@ -226,7 +227,7 @@ const Enquiries = ({ style, className }) => {
                         placeHolder="Select Country"
                     />
                 </div>
-                <div className="col-md-2 col-auto">
+                <div className="col-md-2 col-6">
                     <StateSelect
                         countryid={countryid}
                         onChange={(e) => {
@@ -235,7 +236,7 @@ const Enquiries = ({ style, className }) => {
                         placeHolder="Select State"
                     />
                 </div>
-                <div className="col-md-2 col-auto">
+                <div className="col-md-2 col-6">
                     <LanguageSelect
                         onChange={(e) => {
                             console.log(e);
@@ -244,7 +245,7 @@ const Enquiries = ({ style, className }) => {
                     />
                 </div>
                 {/* Submit Button */}
-                <div className="col-md-2 col-auto mx-auto my-2">
+                <div className="col-md-2 col-6 mx-auto my-2">
                     <button type="submit" className="btn btn-pink">Let's Begin</button>
                 </div>
             </form>
@@ -253,3 +254,133 @@ const Enquiries = ({ style, className }) => {
 };
 
 export default Enquiries;
+
+
+// import React, { useState } from 'react';
+
+// const Enquiries = () => {
+//     const [selectedGender, setSelectedGender] = useState('woman');
+//     const [ageRange, setAgeRange] = useState({ min: 22, max: 27 });
+
+//     return (
+//         <div className="flex items-center justify-center w-full">
+//             <div className="absolute top-[55vh] sm:top-[80vh] min-[1220px]:top-[70vh] w-fit sm:max-w-[80vw] flex flex-wrap gap-2 lg:gap-4 items-center justify-center bg-[#0000003d] rounded pb-6 p-3">
+//                 <div className="flex items-center justify-center max-w-full gap-1">
+//                     <div>
+//                         <h1 className="text-sm sm:text-base text-white font-normal">I'm looking for a</h1>
+//                         <div className="relative">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={selectedGender}
+//                                 onChange={(e) => setSelectedGender(e.target.value)}
+//                             >
+//                                 <option value="woman">Woman</option>
+//                                 <option value="man">Man</option>
+//                                 <option value="gay">Gay</option>
+//                                 <option value="transgender">Transgender</option>
+//                                 <option value="bisexual">Bisexual</option>
+//                             </select>
+//                         </div>
+//                     </div>
+//                     <div className="flex justify-center items-center h-fit w-fit max-w-[10rem] gap-1">
+//                         <div>
+//                             <h1 className="text-sm sm:text-base text-white font-normal">Aged</h1>
+//                             <div className="relative">
+//                                 <select
+//                                     className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                     value={ageRange.min}
+//                                     onChange={(e) => setAgeRange({ ...ageRange, min: e.target.value })}
+//                                 >
+//                                     {[...Array(63)].map((_, i) => (
+//                                         <option key={i} value={i + 18}>{i + 18}</option>
+//                                     ))}
+//                                 </select>
+//                             </div>
+//                         </div>
+//                         <p className="mt-4 text-white">to</p>
+//                         <div className="relative mt-4">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={ageRange.max}
+//                                 onChange={(e) => setAgeRange({ ...ageRange, max: e.target.value })}
+//                             >
+//                                 {[...Array(63)].map((_, i) => (
+//                                     <option key={i} value={i + 18}>{i + 18}</option>
+//                                 ))}
+//                             </select>
+//                         </div>
+//                     </div>
+//                     <div>
+//                         <h1 className="text-sm sm:text-base text-white font-normal">of religions</h1>
+//                         <div className="relative">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={selectedGender}
+//                                 onChange={(e) => setSelectedGender(e.target.value)}
+//                             >
+//                                 <option value="woman">Hindu</option>
+//                                 <option value="man">muslim</option>
+//                                 <option value="gay">sikkh</option>
+//                                 <option value="transgender">Bhai</option>
+//                                 <option value="bisexual">basordia</option>
+//                             </select>
+//                         </div>
+//                     </div>
+//                     <div>
+//                         <h1 className="text-sm sm:text-base text-white font-normal">Mother Tounges</h1>
+//                         <div className="relative">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={selectedGender}
+//                                 onChange={(e) => setSelectedGender(e.target.value)}
+//                             >
+//                                 <option value="woman">Hindi</option>
+//                                 <option value="man">Man</option>
+//                                 <option value="gay">Gay</option>
+//                                 <option value="transgender">Transgender</option>
+//                                 <option value="bisexual">Bisexual</option>
+//                             </select>
+//                         </div>
+//                     </div>
+//                     <div>
+//                         <h1 className="text-sm sm:text-base text-white font-normal">Country state</h1>
+//                         <div className="relative">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={selectedGender}
+//                                 onChange={(e) => setSelectedGender(e.target.value)}
+//                             >
+//                                 <option value="woman">Woman</option>
+//                                 <option value="man">Man</option>
+//                                 <option value="gay">Gay</option>
+//                                 <option value="transgender">Transgender</option>
+//                                 <option value="bisexual">Bisexual</option>
+//                             </select>
+//                         </div>
+//                     </div>
+//                     <div>
+//                         <h1 className="text-sm sm:text-base text-white font-normal">State</h1>
+//                         <div className="relative">
+//                             <select
+//                                 className="bg-default-100 rounded h-8 min-h-8 px-2 rounded-small text-small"
+//                                 value={selectedGender}
+//                                 onChange={(e) => setSelectedGender(e.target.value)}
+//                             >
+//                                 <option value="woman">Woman</option>
+//                                 <option value="man">Man</option>
+//                                 <option value="gay">Gay</option>
+//                                 <option value="transgender">Transgender</option>
+//                                 <option value="bisexual">Bisexual</option>
+//                             </select>
+//                         </div>
+//                     </div>
+//                    <div className="col-md-2 col-6 mx-auto my-2">
+//                    <button type="submit" className="btn btn-pink">Let's Begin</button>
+//                </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Enquiries;

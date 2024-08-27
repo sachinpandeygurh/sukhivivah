@@ -42,11 +42,15 @@
   width: 100vw;
   height: 100vh;
 }
-.carousel-caption h3{
+.carousel-caption h3, .carousel-caption h2{
   font-family: __Satisfy_51677f, __Satisfy_Fallback_51677f;
     font-weight: 400;
     font-style: normal;
-    margin-top: -17em;
+    margin-top: -12em;
+}
+.slidertext{
+  color: white;
+  z-index: 999;
 }
 .carousel-item::after {
   content: '';
@@ -61,7 +65,18 @@
 .carousel-caption , .carousel-control-next , .carousel-control-prev{
   z-index: 99;
 }
-
+.stdropdown-container {
+  border-radius: 15px !important;
+  background-color: white !important;
+  text-align: left;
+  border: 1px solid #ccc !important;
+  /* position: relative; */
+  /* border-radius: 5px; */
+  font-family: "Twemoji Mozilla" !important;
+}
+.stsearch-box input{
+  border: none !important;
+}
 /* Enquiries form css */
 .search-form {
   background: rgba(0, 0, 0, 0.4);
@@ -94,4 +109,13 @@
   .headerform {
     top: -19em;
   }
+  .carousel-caption h3{
+    margin-top: -17em;
+
+  }
+  
+.carousel-control-next , .carousel-control-prev{
+  z-index: 99;
+  display: none;
+}
 }
