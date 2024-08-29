@@ -16,7 +16,7 @@ const Login = ({className}) => {
             <section
                 role="dialog"
                 tabIndex={-1}
-                className="flex bg-white flex-col relative border min-h-screen rounded z-50 w-full box-border bg-content1 outline-none mx-1 my-1 sm:mx-6 sm:my-16 max-w-sm rounded-small shadow-small overflow-y-hidden !outline-none"
+                className="flex bg-white flex-col relative md:top-40 md:border min-h-screen rounded z-50 w-full box-border bg-content1 outline-none mx-1 my-1 sm:mx-6 sm:my-16 max-w-sm rounded-small shadow-small overflow-y-hidden !outline-none"
                 id=":ri:"
                 data-open="true"
                 aria-modal="true"
@@ -228,7 +228,7 @@ const Login = ({className}) => {
                                             type="password"
                                         />
                                         <button
-                                            className="relative inline-flex items-center justify-center w-8 h-8 text-tiny bg-transparent text-default-foreground hover:bg-default/40 rounded transition-transform duration-150"
+                                            className="relative inline-flex items-center justify-center w-8 h-8 text-tiny bg-transparent text-default-foreground hover:bg-default/40 rounded transition-transform duration-150 "
                                             type="button"
                                         >
                                             <svg
@@ -316,13 +316,9 @@ const Login = ({className}) => {
                                 Forgot password?
                             </a>
                         </div>
-                        <span
-                            aria-hidden="true"
-                            className="w-px h-px block"
-                            style={{ marginLeft: "0.25rem", marginTop: "3rem" }}
-                        />
+                       
                         <button
-                            className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-small w-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover bg-[#F80263] text-white font-semibold"
+                            className="z-0 group rounded relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 h-8 gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover min-w-[10rem] mt-0 sm:mt-[1.35rem] bg-[#F80263] text-white font-semibold text-base"
                             type="button"
                         >
                             Login
@@ -426,11 +422,11 @@ const Login = ({className}) => {
                             />
                         </div>
                     </form>
-                    <p className=" w-full max-w-full h-fit flex items-center justify-center text-[#A1A1A7] text-sm leading-4  ">
+                    <p className=" w-full max-w-full  flex items-center justify-center text-[#A1A1A7] text-sm leading-4  my-0">
                         OR
                     </p>
                     <button
-                        className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-small w-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover bg-[#F80263] text-white font-semibold"
+                        className="z-0 group rounded relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 h-8 gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover min-w-[10rem] mt-0 sm:mt-[1.35rem] bg-[#F80263] text-white font-semibold text-base w-25 mx-auto"
                         type="button"
                     >
                         Login with OTP

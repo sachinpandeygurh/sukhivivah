@@ -8,15 +8,15 @@ const Slider = () => {
   const sliderItems = [
     {
       url: heroimg4,
-      text: "Meet Verified Partner Only At Sukhvivah",
+      text: "Meet Verified Partner ",
     },
     {
       url: heroimg3,
-      text: "Locate your Dating Partner Only At Sukhvivah",
+      text: "Locate your Dating Partner",
     },
     {
       url: heroimg2,
-      text: "Meet Verified Friend's Only At Sukhvivah",
+      text: "Meet Verified Friend's",
     },
   ];
 
@@ -46,13 +46,18 @@ const Slider = () => {
                 right: 0,
                 bottom: 0,
                 color: 'transparent',
+                
               }}
               sizes="100vw"
               src={item.url}
             />
             <div className="absolute bottom-[47vh] sm:bottom-[22vh] min-[1220px]:bottom-[29vh] w-full flex flex-col justify-center items-center text-center text-[#fff]">
-              <h1 className="satisfy-regular slidertext h-fit max-h-fit text-[1.7rem] sm:text-4xl font-normal flex justify-center [text-shadow:_0px_0px_4px_#000000] !pb-4 max-[375px]:p-0 min-[375px]:p-6 min-[390px]:p-[10%] ">
+              <h1 className="satisfy-regular slidertext h-fit max-h-fit text-[1.7rem] sm:text-4xl font-normal flex justify-center [text-shadow:_0px_0px_4px_#000000]  max-[375px]:p-0 min-[375px]:p-6 min-[390px]:p-[10%] ">
                 {item.text}
+              </h1>
+              
+              <h1 className="satisfy-regular slidertext h-fit max-h-fit text-[1.7rem] sm:text-4xl font-normal flex justify-end [text-shadow:_0px_0px_4px_#000000] max-[375px]:p-0 min-[375px]:p-6 min-[390px]:p-[10%] ">
+              Only At Sukhvivah
               </h1>
             </div>
           </Carousel.Item>

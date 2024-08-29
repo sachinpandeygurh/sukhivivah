@@ -82,9 +82,14 @@
 }
 /* Enquiries form css */
 .stsearch-box input::placeholder {
-  /* color: #000 !important; */
+  color: #000 !important;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  /* color: rgb(55 65 81 / var(--tw-text-opacity)); */
+  font-weight: 400;
+  font-family: "Raleway" !important;
+}
+.stsearch-box input{
+  padding: 0 !important;
 }
 
 .search-form {

@@ -1,0 +1,745 @@
+.clapyResets,
+.clapyResets * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.clapyResets,
+.clapyResets :not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+.clapyResets ul,
+.clapyResets ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+.clapyResets p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+.clapyResets img {
+  object-fit: contain;
+}
+
+.clapyResets svg {
+  overflow: visible;
+}
+
+
+.root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    background-image:/* webpackIgnore: true */ url('assets/image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .heading1 {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 49.84px);
+    width: 390px;
+    height: 146.5px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .meetVerifiedPartnerOnlyAtSukhv {
+    position: absolute;
+    left: calc(50% - -0.1px);
+    top: 54.5px;
+    width: 248.86px;
+    height: 79px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 4px #000;
+    flex-direction: column;
+    transform: translateX(-50%);
+  }
+  .textBlock {
+    color: #fff;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: Satisfy, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+  }
+  .textBlock2 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: Satisfy, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 429px;
+    width: 390px;
+    height: 256px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 4px;
+    background-color: #0000003d;
+  }
+  .container2 {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 90px);
+    width: 324px;
+    height: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .heading1IMLookingForA {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 102.8786px;
+    height: 20px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container3 {
+    position: absolute;
+    left: 0;
+    right: 164px;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container4 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  .woman {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 51.0553px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+  .container5 {
+    position: absolute;
+    left: calc(50% - -82px);
+    top: 50%;
+    width: 160px;
+    height: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .heading12 {
+    position: absolute;
+    left: -0.17px;
+    right: 91.37px;
+    top: 0;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .aged {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 35.1458px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container6 {
+    position: absolute;
+    left: -0.17px;
+    right: 91.37px;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container7 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  ._22 {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 14.9599px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame2 {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon2 {
+    width: 100%;
+    height: 100%;
+  }
+  .to {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 72.63px;
+    top: 22px;
+    width: 15.1219px;
+    height: 24px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container8 {
+    position: absolute;
+    left: calc(50% - -45.78px);
+    top: calc(50% - -10px);
+    width: 68.8px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .buttonListbox3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container9 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  ._27 {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 15.1725px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame3 {
+    position: absolute;
+    right: 12.01px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon3 {
+    width: 100%;
+    height: 100%;
+  }
+  .container10 {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 30px);
+    width: 324px;
+    height: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .heading13 {
+    position: absolute;
+    left: 0;
+    right: 164px;
+    top: 0;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .ofReligion {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 68.5851px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container11 {
+    position: absolute;
+    left: 0;
+    right: 164px;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container12 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  .hindu {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 38.8974px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame4 {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon4 {
+    width: 100%;
+    height: 100%;
+  }
+  .heading14 {
+    position: absolute;
+    left: 164px;
+    right: 0;
+    top: 0;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .motherToungue {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 104.5312px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container13 {
+    position: absolute;
+    left: 164px;
+    right: 0;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container14 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  .hindi {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 33.611px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame5 {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon5 {
+    width: 100%;
+    height: 100%;
+  }
+  .container15 {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - -30px);
+    width: 324px;
+    height: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translate(-50%, -50%);
+  }
+  .heading15 {
+    position: absolute;
+    left: 0;
+    right: 164px;
+    top: 0;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .country {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 51.908px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container16 {
+    position: absolute;
+    left: 0;
+    right: 164px;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox6 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container17 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  .india {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 31.4177px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame6 {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon6 {
+    width: 100%;
+    height: 100%;
+  }
+  .heading16 {
+    position: absolute;
+    left: 164px;
+    right: 0;
+    top: 0;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .state {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 33.7414px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container18 {
+    position: absolute;
+    left: 164px;
+    right: 0;
+    top: 20px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonListbox7 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f4f4f5;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+  }
+  .container19 {
+    position: absolute;
+    left: 8px;
+    right: 32px;
+    top: 50%;
+    height: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  .maharashtra {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 80.5438px;
+    height: 16px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .frame7 {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+  }
+  .icon7 {
+    width: 100%;
+    height: 100%;
+  }
+  .button {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - -88px);
+    width: 160px;
+    height: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: #f80263;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+  .letSBegin {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: Raleway, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    left: calc(50% - -0.1595px);
+    top: 6px;
+    width: 83.919px;
+    height: 19px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(-50%);
+  }
+  

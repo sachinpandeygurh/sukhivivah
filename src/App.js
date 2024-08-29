@@ -8,6 +8,7 @@ import Enquiries from './component/Enquries';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
+import LetsBegain from './component/LetsBegain';
 
 function App() {
   return (
@@ -30,9 +31,9 @@ function App() {
         <Route 
           path="/login" 
           element={
-            <div className='relative' >
-              <Slider />
-          <Login className="absolute "/>
+            <div className='relative bg-dark' >
+             {/* <Header/> */}
+          <Login className="absolute top-5"/>
             </div>
         } 
         />
@@ -40,17 +41,10 @@ function App() {
           path="/signup" 
           element={
              <div className='relative' >
-                <Header 
-          style={{ 
-            zIndex: 999, 
-            backgroundImage: "radial-gradient( circle farthest-corner at -2% 1.4%, #fff 0%, #ff007f 100.7% )" 
-          }} />
-              <Slider />
+             
           <Signup className="absolute  "/>
          
-           <div style={{ position: "relative" }}>
-           {/* <Enquiries style={{ position: "absolute" }} className="headerform" /> */}
-         </div>
+
           </div>} 
         />
         </Routes>

@@ -21,37 +21,39 @@ const Header = () => {
   
     return (
       <>
-      <Modal isOpen={modal} toggle={toggle}>
-      <div data-slot="content" className="z-10 inline-flex flex-col items-center justify-center subpixel-antialiased outline-none box-border text-small bg-content1 rounded-large shadow-medium w-full p-1 min-w-[200px]" data-placement="bottom">
-  <ul data-slot="list" className="w-full flex flex-col gap-0.5 outline-none p-2 text-dark" role="menu" tabIndex="-1">
-    <a href="#ticket" role="menuitem" tabIndex="-1" className="flex gap-2 text-dark items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer hover:bg-default-100 text-decoration-none no-underline">
-      <div className="w-full flex flex-col items-start text-dark">
-        <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Raise ticket</span>
-        <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Raise a ticket for your complaint and it will be resolved within 48 hours.</span>
+      <Modal className='top-5' isOpen={modal} toggle={toggle}>
+      <div data-slot="content" className="z-10 top-5 inline-flex flex-col items-center justify-center subpixel-antialiased outline-none box-border text-small bg-content1 rounded-large shadow-medium w-full p-1 min-w-[200px] rounded" data-placement="bottom" style={{backgroundColor: "#ff007f"}}>
+      <ul data-slot="list" className="w-full flex m-0  flex-col gap-0.5 outline-none p-0 px-2 text-white" role="menu" tabIndex="-1">
+    <a href="#ticket" role="menuitem" tabIndex="-1" className="flex gap-2 text-white items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer hover:bg-default-100 text-decoration-none no-underline">
+      <div className="w-full flex flex-col items-start text-white">
+        <span className="flex-1 text-small" style={{ fontSize: "0.875rem", fontWeight: 400, }}>Raise Ticket</span>
+        <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ fontSize: "0.75rem" }}>Raise a ticket for your complaint and it will be resolved within 48 hours.</span>
       </div>
       <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path d="m9 18 6-6-6-6"></path>
       </svg>
     </a>
-    <a href="mailto:support@sukhvivah.com" role="menuitem" tabIndex="-1" className="flex text-dark group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
+    <a href="mailto:support@sukhvivah.com" role="menuitem" tabIndex="-1" className="flex text-white group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
       <div className="w-full flex flex-col items-start">
-      <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Contact Us</span>
-      <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Email us about your complaint, and we will respond within 48 hours.</span>
+      <span className="flex-1 text-small" style={{ fontSize: "0.875rem", fontWeight: 400, }}>Appointment</span>
+      <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ fontSize: "0.75rem" }}>Email us about your appointment, and we will respond within 48 hours.</span>
       </div>
       <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path d="m9 18 6-6-6-6"></path>
       </svg>
     </a>
-    <a href="https://wa.me/message/NWKIFGCO5X2GI1" role="menuitem" tabIndex="-1" className="flex text-dark group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
-      <div className="w-full flex flex-col items-start">
-      <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Emergency</span>
-      <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Report emergencies on WhatsApp. Quick action will be taken within 12 hours.</span>
-      </div>
-      <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-        <path d="m9 18 6-6-6-6"></path>
-      </svg>
-    </a>
-  </ul>
+    <a href="mailto:support@sukhvivah.com" role="menuitem" tabIndex="-1" className="flex text-white group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
+  <div className="w-full flex flex-col items-start">
+    <span className="flex-1 text-small" style={{ fontSize: "0.875rem", fontWeight: 400, }}>Contact Us</span>
+    <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ fontSize: "0.75rem" }}>Mail us about your complaint and we will get back to you within 48 hours. support@sukhvivah.com</span>
+  </div>
+  <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+    <path d="m9 18 6-6-6-6"></path>
+  </svg>
+</a>
+
+</ul>
+
 </div>
 
       </Modal>

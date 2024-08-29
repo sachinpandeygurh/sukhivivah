@@ -7,13 +7,13 @@ import {
 import "react-country-state-city/dist/react-country-state-city.css";
 
 const Enquiries = ({ style, className }) => {
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("woman");
   const [isGenderDropdownOpen, setGenderDropdownOpen] = useState(false);
-  const [minAge, setMinAge] = useState("");
-  const [maxAge, setMaxAge] = useState("");
-  const [selectedReligion, setSelectedReligion] = useState("");
+  const [minAge, setMinAge] = useState("18");
+  const [maxAge, setMaxAge] = useState("21");
+  const [selectedReligion, setSelectedReligion] = useState("Hindu");
   const [isReligionDropdownOpen, setReligionDropdownOpen] = useState(false);
-  const [countryid, setCountryid] = useState(0);
+  const [countryid, setCountryid] = useState(1);
   const [stateid, setstateid] = useState(0);
 
   const religions = [
@@ -27,44 +27,44 @@ const Enquiries = ({ style, className }) => {
     "Judaism",
     "Other",
   ];
+  const ageOptions = Array.from({ length: 30 }, (_, i) => i + 18);
 
-  const ageOptions = Array.from({ length: 80 }, (_, i) => i + 18);
+  const handleMinAgeSelect = (event) => {
+    setMinAge(event.target.value);
+  };
+
+  const handleMaxAgeSelect = (event) => {
+    setMaxAge(event.target.value);
+  };
 
   const handleGenderSelect = (selectedGender) => {
     setGender(selectedGender);
     setGenderDropdownOpen(false);
   };
 
-  const handleMinAgeSelect = (age) => {
-    setMinAge(age);
-  };
-
-  const handleMaxAgeSelect = (age) => {
-    setMaxAge(age);
-  };
-
   const handleReligionSelect = (religion) => {
     setSelectedReligion(religion);
     setReligionDropdownOpen(false);
   };
-
+  console.log("countryid", countryid)
   return (
     <div
       className={`search-form p-3 d-flex justify-content-center align-items-center ${className}`}
       style={style}
     >
       <form className="row  g-2 w-100 justify-content-around">
-        <h1 className="text-sm sm:text-base text-start text-white font-normal">
-          I'm looking{" "}
-        </h1>
         {/* Gender Selector */}
         <div className="col-md-1 col-6 ">
-          <div style={{ position: "relative" }}>
-            <div className="stdropdown-container">
+          <h1 className="text-sm sm:text-base text-start text-white font-normal">
+            I'm looking{" "}
+          </h1>
+          <div className="" style={{ position: "relative" }}>
+            <div className="stdropdown-container ">
               <div
                 className="stdropdown-input stsearch-box"
                 onClick={() => setGenderDropdownOpen(!isGenderDropdownOpen)}
               >
+                {/* set defalut 1st options => man */}
                 <input placeholder="Select Gender" value={gender} readOnly />
                 <div className="stdropdown-tools">
                   <div className="stdropdown-tool">
@@ -77,7 +77,7 @@ const Enquiries = ({ style, className }) => {
 
               {isGenderDropdownOpen && (
                 <div className="stdropdown-menu">
-                  
+
                   <div
                     className="stdropdown-item"
                     onClick={() => handleGenderSelect("Man")}
@@ -103,14 +103,17 @@ const Enquiries = ({ style, className }) => {
         </div>
 
         {/* Age Selector */}
-       
         <div className="col-md-3 col-6">
+          <h1 className="text-sm sm:text-base col-auto text-start text-white font-normal">
+            Aged
+          </h1>
           <div className="flex items-center">
-            {/* Minimum Age Selector */}
             <div className="">
               <select
                 id="minAgeSelect"
-                className="p-2 rounded-lg border border-gray-300 text-gray-700 w-full"
+                className="p-2 rounded-lg border border-gray-300 text-dark w-full"
+                value={minAge} 
+                onChange={handleMinAgeSelect} 
               >
                 <option>Min Age</option>
                 {ageOptions.map((age, index) => (
@@ -121,13 +124,13 @@ const Enquiries = ({ style, className }) => {
               </select>
             </div>
 
-            <div className="mx-2 text-white">To</div>
-
-            {/* Maximum Age Selector */}
+            <div className="mx-2 text-white">to</div>
             <div className="flex items-center">
               <select
                 id="maxAgeSelect"
-                className="p-2 rounded-lg border border-gray-300 text-gray-700 w-full"
+                className="p-2 rounded-lg border border-dark text-gray-700 w-full"
+                value={maxAge}
+                onChange={handleMaxAgeSelect}
               >
                 <option>Max Age</option>
                 {ageOptions.map((age, index) => (
@@ -142,6 +145,9 @@ const Enquiries = ({ style, className }) => {
 
         {/* Religion Selector */}
         <div className="col-md-2 col-6">
+          <h1 className="text-sm sm:text-base text-start text-white font-normal">
+            of Religion
+          </h1>
           <div style={{ position: "relative" }}>
             <div className="stdropdown-container">
               <div
@@ -179,35 +185,45 @@ const Enquiries = ({ style, className }) => {
           </div>
         </div>
 
+        {/* Language Select */}
+        <div className="col-md-2 col-6">
+          <h1 className="text-sm sm:text-base text-start text-white font-normal">
+            Mother toungue
+          </h1>
+          <LanguageSelect placeHolder="Marathi" />
+        </div>
+
         {/* Country Select */}
         <div className="col-md-2 col-6">
-        <CountrySelect
-        onChange={(e) => {
-          setCountryid(e.id);
-        }}
-        placeHolder="Select Country"
-      />
+          <h1 className="text-sm sm:text-base text-start text-white font-normal">
+            Country
+          </h1>
+          <CountrySelect
+            onChange={(e) => {
+              setCountryid(e.id);
+            }}
+            placeHolder="India"
+          />
         </div>
 
         {/* State Select */}
         <div className="col-md-2 col-6">
-        <StateSelect
-        countryid={countryid}
-        onChange={(e) => {
-          setstateid(e.id);
-        }}
-        placeHolder="Select State"
-      />
+          <h1 className="text-sm sm:text-base text-start text-white font-normal">
+            State
+          </h1>
+          <StateSelect
+            countryid={countryid}
+            onChange={(e) => {
+              setstateid(e.id);
+            }}
+            placeHolder="Select State"
+          />
         </div>
 
-        {/* Language Select */}
-        <div className="col-md-2 col-6">
-          <LanguageSelect  placeHolder="Select Language"/>
+        {/* Submit Button */}
+        <div className="col-md-2 col-6 mx-auto my-2">
+          <button type="submit" className="z-0 group rounded relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 h-8 gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover min-w-[10rem] mt-2 sm:mt-[1.35rem] bg-[#F80263] text-white font-semibold text-base">Let's Begin</button>
         </div>
-         {/* Submit Button */}
-         <div className="col-md-2 col-6 mx-auto my-2">
-                    <button type="submit" className="btn btn-pink">Let's Begin</button>
-                </div>
       </form>
     </div>
   );

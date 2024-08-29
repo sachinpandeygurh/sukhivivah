@@ -32,7 +32,7 @@ const Signup = ({ className }) => {
             <section
                 role="dialog"
                 tabIndex={-1}
-                className="flex bg-white flex-col border min-h-screen rounded relative z-50 w-full bg-content1 mx-1 my-1 sm:mx-6 sm:my-16 max-w-sm rounded-small shadow-small overflow-y-hidden outline-none"
+                className="flex bg-white flex-col md:border min-h-screen rounded relative z-50 w-full bg-content1 mx-1 my-1 sm:mx-6 sm:my-16 max-w-sm rounded-small shadow-small overflow-y-hidden outline-none"
                 aria-modal="true"
                 aria-labelledby="signup-header"
                 aria-describedby="signup-description"
