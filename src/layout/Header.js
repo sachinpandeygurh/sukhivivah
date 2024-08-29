@@ -1,58 +1,6 @@
-// import React, { } from 'react';
-// import {
-//     Navbar,
-//     NavbarBrand,
-//     NavbarText,
-// } from 'reactstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHeadset, faUser, faTabletScreenButton } from '@fortawesome/free-solid-svg-icons';
-
-// const Header = ({style}) => {
-//     // const [isOpen, setIsOpen] = useState(false);
-
-//     // const toggle = () => setIsOpen(!isOpen);
-
-//     return (
-//         <div className="position-absolute">
-//             <Navbar expand="md" className="position-fixed w-100" style={style}>
-//                 <NavbarBrand className='col-md-3 col-2' href="/">
-//                     <img src={require('../img/logo.gif')} alt="Logo" width={120} />
-//                 </NavbarBrand>
-//                 <div className='col-md-3 row col-10     justify-content-end'>
-//                     <NavbarText className='col-md-5 col-5 d-flex flex-column align-items-center justify-content-center' >
-//                         <FontAwesomeIcon icon={faTabletScreenButton} />
-//                         <span> Dowanload app</span>
-//                     </NavbarText>
-//                     <NavbarText className='col-md-3 col-2 d-flex flex-column align-items-center justify-content-center' >
-//                         <FontAwesomeIcon icon={faHeadset} />
-//                         <span> Help</span>
-//                     </NavbarText>
-//                     <NavbarText className='col-md-4 col-3 d-flex flex-column align-items-center justify-content-center' >
-//                         <FontAwesomeIcon icon={faUser} />
-//                         <span> login</span>
-//                     </NavbarText>
-//                 </div>
-
-//                 {/* <UncontrolledDropdown nav inNavbar>
-//                     <DropdownToggle nav caret>
-//                         Options
-//                     </DropdownToggle>
-//                     <DropdownMenu right>
-//                         <DropdownItem>Option 1</DropdownItem>
-//                         <DropdownItem>Option 2</DropdownItem>
-//                         <DropdownItem divider />
-//                         <DropdownItem>Reset</DropdownItem>
-//                     </DropdownMenu>
-//                 </UncontrolledDropdown> */}
-//             </Navbar>
-//         </div>
-//     );
-// };
-
-// export default Header;
-
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Link} from "react-router-dom"
 import logo from "../img/logo.gif"
 
 
@@ -75,11 +23,11 @@ const Header = () => {
       <>
       <Modal isOpen={modal} toggle={toggle}>
       <div data-slot="content" className="z-10 inline-flex flex-col items-center justify-center subpixel-antialiased outline-none box-border text-small bg-content1 rounded-large shadow-medium w-full p-1 min-w-[200px]" data-placement="bottom">
-  <ul data-slot="list" className="w-full flex flex-col gap-0.5 outline-none p-0 text-dark" role="menu" tabIndex="-1">
-    <a href="#ticket" role="menuitem" tabIndex="-1" className="flex gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer hover:bg-default-100 text-decoration-none no-underline">
+  <ul data-slot="list" className="w-full flex flex-col gap-0.5 outline-none p-2 text-dark" role="menu" tabIndex="-1">
+    <a href="#ticket" role="menuitem" tabIndex="-1" className="flex gap-2 text-dark items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer hover:bg-default-100 text-decoration-none no-underline">
       <div className="w-full flex flex-col items-start text-dark">
-        <span className="text-small font-normal fw-bold">Raise ticket</span>
-        <span className="text-tiny text-foreground-500 group-hover:text-current">Raise a ticket for your complaint and it will be resolved within 48 hours.</span>
+        <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Raise ticket</span>
+        <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Raise a ticket for your complaint and it will be resolved within 48 hours.</span>
       </div>
       <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path d="m9 18 6-6-6-6"></path>
@@ -87,8 +35,8 @@ const Header = () => {
     </a>
     <a href="mailto:support@sukhvivah.com" role="menuitem" tabIndex="-1" className="flex text-dark group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
       <div className="w-full flex flex-col items-start">
-        <span className="text-small font-normal truncate fw-bold">Contact Us</span>
-        <span className="text-tiny text-foreground-500 group-hover:text-current">Email us about your complaint, and we will respond within 48 hours.</span>
+      <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Contact Us</span>
+      <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Email us about your complaint, and we will respond within 48 hours.</span>
       </div>
       <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path d="m9 18 6-6-6-6"></path>
@@ -96,8 +44,8 @@ const Header = () => {
     </a>
     <a href="https://wa.me/message/NWKIFGCO5X2GI1" role="menuitem" tabIndex="-1" className="flex text-dark group gap-2 items-center justify-between relative px-2 py-1.5 w-full h-full box-border rounded-small cursor-pointer tap-highlight-transparent outline-none hover:bg-default-100 text-decoration-none no-underline">
       <div className="w-full flex flex-col items-start">
-        <span className="text-small font-normal truncate fw-bold">Emergency</span>
-        <span className="text-tiny text-foreground-500 group-hover:text-current">Report emergencies on WhatsApp. Quick action will be taken within 12 hours.</span>
+      <span className="flex-1 text-small  " style={{fontSize:"0.875rem", fontWeight: 400}}>Emergency</span>
+      <span className="text-tiny text-foreground-500 group-hover:text-current" style={{ color: "hsl(240, 3.83%, 46.08%)", fontSize: "0.75rem" }}>Report emergencies on WhatsApp. Quick action will be taken within 12 hours.</span>
       </div>
       <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path d="m9 18 6-6-6-6"></path>
@@ -127,9 +75,9 @@ const Header = () => {
       </a>
       <ul className="hidden md:flex items-center justify-center gap-3">
         <li>
-          <div className="group flex flex-col w-full relative justify-end mt-4 min-w-full max-w-full px-4 outline-none border-white">
+          <div className="group flex flex-col w-full relative justify-end border rounded min-w-full max-w-full px-4 outline-none border-white">
             <div className="h-full flex flex-col">
-              <div className="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 hover:border-default-400 group-focus:border-default-foreground h-10 min-h-10 rounded-md transition-background duration-150 transition-colors">
+              <div className="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm  gap-3 border-medium border-default-200 hover:border-default-400 group-focus:border-default-foreground h-10 min-h-10 rounded-md transition-background duration-150 transition-colors">
                 <div className="inline-flex w-full items-center h-full box-border">
                   <svg
                     stroke="currentColor"
@@ -138,21 +86,23 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    height="1em"
-                    width="1em"
+                    height="1.5em"
+                    width="1.5em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <circle cx="11" cy="11" r="8" />
                     <path d="m21 21-4.3-4.3" />
                   </svg>
                   <input
-                    className="w-full font-normal bg-transparent outline-none placeholder:text-foreground-500 focus-visible:outline-none text-small pr-6 h-full"
+                    className="w-full mx-3 font-normal bg-transparent outline-none placeholder:text-foreground-500 focus-visible:outline-none text-small pr-6 h-full"
                     aria-label="Profile search"
                     type="text"
                     placeholder="Search a profile"
                     id="profile-search"
                     value=""
+                    // onChange={()=>value}
                   />
+                    <Link className='text-white text-decoration-none' to='/login'>
                   <span
                     role="button"
                     tabIndex="0"
@@ -172,6 +122,7 @@ const Header = () => {
                       />
                     </svg>
                   </span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -217,7 +168,8 @@ const Header = () => {
           </button>
         </li>
         <li className="rounded-xl">
-          <button className="flex items-center justify-center">
+          <Link className='text-white text-decoration-none' to='/login'>
+          <button className="flex items-center justify-center" href='/login'>
             Login
             <svg
               stroke="currentColor"
@@ -233,6 +185,7 @@ const Header = () => {
               <path d="m6 9 6 6 6-6" />
             </svg>
           </button>
+          </Link>
         </li>
       </ul>
       <div className="flex justify-center items-center gap-3 md:hidden m-3">
@@ -277,6 +230,7 @@ const Header = () => {
           </button>
         </li>
         <li className="rounded-xl">
+        <Link className='text-white text-decoration-none' to='/login'>
           <button className="flex items-center justify-center">
             Login
             <svg
@@ -293,6 +247,7 @@ const Header = () => {
               <path d="m6 9 6 6 6-6" />
             </svg>
           </button>
+          </Link>
         </li>
       </div>
     </div>

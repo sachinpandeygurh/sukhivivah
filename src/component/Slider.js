@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
-import Marquee from "react-simple-marquee";
 import heroimg4 from '../img/heroimg_4.webp';
 import heroimg3 from '../img/heroimg_3.webp';
 import heroimg2 from '../img/heroimg_2.webp';
